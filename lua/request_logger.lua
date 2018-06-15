@@ -1,5 +1,4 @@
-ngx.log(ngx.ERR, "REQUEST capturing started")
-json = require("json")
+json = require("cjson")
 
 function getval(v, def)
   if v == nil then
@@ -32,5 +31,5 @@ resp["duration"] = ngx.var.upstream_response_time
 resp["time"] = ngx.now()
 resp["body"] = ngx.var.response_body
 
-ngx.log(ngx.CRIT, json.encode(data));
+ngx.log(ngx.INFO, json.encode(data));
 
