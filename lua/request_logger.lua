@@ -31,7 +31,7 @@ resp["duration"] = ngx.var.upstream_response_time
 resp["time"] = ngx.now()
 resp["body"] = ngx.var.response_body
 
-local file = io.open("//var/log/openresty/http-monitor.log","a")
+local file = io.open("/tmp/http-monitor.log","a")
 local hc = "\n"
 file:write(json.encode(data))
 file:write(hc)
