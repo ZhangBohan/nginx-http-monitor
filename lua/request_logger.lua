@@ -7,7 +7,7 @@ function getval(v, def)
   return v
 end
 
-local data = {request={}, response={}}
+local data = {request={}, response={}, request_id=ngx.var.request_id, host=ngx.var.host, uri=ngx.var.uri, method=ngx.req.get_method()}
 
 local req = data["request"]
 local resp = data["response"]
@@ -31,5 +31,10 @@ resp["duration"] = ngx.var.upstream_response_time
 resp["time"] = ngx.now()
 resp["body"] = ngx.var.response_body
 
-ngx.log(ngx.INFO, json.encode(data));
+local file = io.open("//var/log/openresty/http-monitor.log","a")
+local hc = "\n"
+file:write(json.encode(data))
+file:write(hc)
+file:close()
 
+ngx.log(ngx.INFO, json.encode(data));
