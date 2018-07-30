@@ -71,7 +71,7 @@ POST /abc x=2&y=z
 
 ## 安装
 
-// FIXME todo
+// FIXME TODO
 
 参考：
 
