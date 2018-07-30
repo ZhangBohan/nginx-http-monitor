@@ -1,6 +1,7 @@
 # nginx-http-monitor
 
 - OpenResty
+- Lua
 
 开发过程中后端与客户端之前接口请求沟通成本过高，双方需要多次确认信息且很可能得到错误的信息，
 基于该痛点开发了`nginx-http-monitor`
