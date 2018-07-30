@@ -69,6 +69,10 @@ POST /abc x=2&y=z
 }
 ```
 
+## 安装
+
+// FIXME todo
+
 参考：
 
 - [Request Capturing using NGINX and Lua](http://tarunlalwani.com/post/request-capturing-nginx-lua/)
